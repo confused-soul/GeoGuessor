@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/image/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../static/styles/access.css">
+    <title>GeoGuessor</title>
+</head>
+<body>
+    <div id="mobile-message" style="margin:0 10vw">
+        <h2 id="heading-text"><span style="color:#7edb5a">Geo</span>Guessor</h2>
+        <p>This website is best viewed on a PC or laptop. Please switch to a larger screen for the best experience.</p>
+    </div>
+    <script>
+        function checkScreenSize() {
+            // Redirect to index if screen width is greater than or equal to 768px
+            if (window.innerWidth >= 768) {
+                window.location.href = "/";
+            }
+        }
+
+        // Check screen size on load
+        window.addEventListener("load", checkScreenSize);
+
+        // Check screen size on resize
+        window.addEventListener("resize", checkScreenSize);
+    </script>
+</body>
+</html>
