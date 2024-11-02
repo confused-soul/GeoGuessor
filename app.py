@@ -30,7 +30,7 @@ auth = firebase.auth()
 db = firebase.database()
 
 # Replace 'file.csv' with your file path
-places = pd.read_csv('places/places.csv')
+places = pd.read_csv('places.csv')
 
 def choose(df):
     if len(session['chosen_ids']) == len(df):
