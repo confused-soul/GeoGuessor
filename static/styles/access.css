@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#heading-text{
+    color: #004bab;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10vh;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #0000003a;
+}
+
+#welcome-text{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20vw;
+    padding: 25px;
+}
+
+input{
+    width: 20vw;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0000003a;
+    border-radius: 15px;
+}
+
+button{
+    width: 10vw;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 15px;
+    background-color: #000000a7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #0000003a;
+    border: 1px solid #000000a7;
+    color: #000000a7;
+}
+
+/* Style for the flash message container */
+.alert-container {
+    margin-top: 20px;
+}
+
+/* Success message styling */
+.alert-success {
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Error message styling */
+.alert-danger {
+    color: #721c24;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Warning message styling */
+.alert-warning {
+    color: #856404;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Information message styling */
+.alert-info {
+    color: #0c5460;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+footer{
+    height: 5vh;
+    color: black;
+    padding: 2.5vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }

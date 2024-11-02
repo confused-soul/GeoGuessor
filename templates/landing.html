@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/landing.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>GeoGuessor | Dashboard</title>
+</head>
+<body>
+    <nav>
+        <div id="web-name">
+            <h2>GeoGuessor</h2>
+        </div>
+        <div id="nav-right-btn-container">
+            <a href="/logout" class="acc-btn">Logout</a>
+        </div>
+    </nav>
+    <div id="section1">
+        <div id="s1-textbox">
+            <p id="tag-line-1"><strong>Welcome, <br>{{ username }}</strong></p>
+            <p id="tag-line-2">Discover, Guess, Repeat – Where Will You Land Next?</p>
+            <div>
+                {% if highscore != "none" %}
+                    <p id="highscore-display">Your Highest Score: {{ highscore }}</p>
+                {% endif %}
+
+                {% if average_score != "none" %}
+                    <p id="average_score-display">Your Average Score: {{ average_score }}</p>
+                {% endif %}
+                
+                {% if user_rank is not none %}
+                    <p id="user-rank-display">Your Rank: {{ user_rank }}</p>
+                {% endif %}
+            </div>
+            <a href="/game" class="body-btn">Start Game <i class="bi bi-arrow-right" id="body-btn-icon"></i></a>
+        </div>
+        <div id="tag-imagebox">
+            <img src="../static/image/section1.png" alt="section1-image">
+        </div>
+    </div>
+    
+    <!-- Leaderboard Section -->
+    <div id="leaderboard">
+        <h3>Leaderboard</h3>
+        <div class="table-container">  <!-- Add a div to wrap the table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Username</th>
+                        <th>Average Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for rank, username, score in leaderboard %}
+                    <tr class="{% if username == session['username'] %}highlight{% endif %}">
+                        <td>{{ rank }}</td>
+                        <td>{{ username }}</td>
+                        <td>{{ score }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <div id="footer-text">
+            <p>© 2024 GeoGuessor | Made with ❤️ by <a href="https://github.com/confused-soul">Md Yasir Khan</a></p>
+        </div>
+    </footer>
+</body>
+</html>

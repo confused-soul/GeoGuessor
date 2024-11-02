@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="../static/styles/game.css">
+    <title>GeoGuessor | Game</title>
+</head>
+<body>
+    <nav>
+        <div id="web-name">
+            <h2>GeoGuessor</h2>
+        </div>
+        <div id="nav-right-btn-container">
+            <a href="/logout" class="acc-btn">Logout</a>
+            <a href="/landing" class="acc-btn">Dashboard</a>
+        </div>
+    </nav>
+    
+    <main id="section1">
+        <div id="s1-textbox">
+            {% if highscore != "none" %}
+                <p id="highscore-display">Your Highest Score: {{ highscore }}</p>
+            {% endif %}
+            {% if average_score != "none" %}
+                <p id="average_score-display">Your Average Score: {{ average_score }}</p>
+            {% endif %}
+        </div>
+        <h3 id="sub-title">Guess the Place: </h3>
+        <div id="game-space">
+            <div id="info-game">
+                <div id="image-area" style="margin-top: 20px;"></div>
+                <div id="map" style="height: 400px;"></div>
+            </div>
+            <div id="score-display" style="margin-top: 20px;">
+                <p id="score">Score: -</p>
+                <p id="distance">Distance: - km</p>
+                <p id="place-name">Place: -</p>
+                <p id="place-location">Location: -</p>
+            </div>
+            <div class="btn-container">
+                <button id="submitBtn" class="body-btn">Submit</button>
+                <button id="nextPlaceBtn" class="body-btn">Next Place</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-text">
+            <p>© 2024 GeoGuessor | Made with ❤️ by <a href="#">Md Yasir Khan</a></p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="../static/scripts/game.js"></script>
+</body>
+</html>

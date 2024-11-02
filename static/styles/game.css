@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 0 10vw;
+    font-family: Arial, sans-serif;
+    background-image: url('../image/bg.png');
+    background-size: 100vw; /* Ensures the image covers the entire background */
+    background-position: top; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+  }
+  
+  nav{
+    color: white;
+    padding: 2.5vh 0 2.25vh 0;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+  }
+  
+  #nav-right-btn-container{
+    display: flex;
+    flex-direction: row;
+    width: 15vw;
+    justify-content: space-between;
+  }
+  
+  .acc-btn{
+    padding: 8px 15px;
+    margin: 0 1vw;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .acc-btn:hover {
+    background-color: #0000003a;
+    color: white;
+  }
+  
+  #section1{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-direction: column;
+    height: 86.5vh;
+  }
+  
+  #s1-textbox{
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+  }
+
+  #s1-textbox p{
+    display: inline;
+    color: black;
+    margin: 0 1vw;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    
+  }
+  
+  #tag-line-1{
+    padding: 2.5vh 0;
+    color: black;
+    font-size: 3.75em;
+    width: 40vw;
+  }
+  
+  #tag-line-2{
+    color: black;
+    font-size: 1.5em;
+    width: 40vw;
+  }
+  
+  #tag-imagebox img{
+    width: 35vw;
+    padding-bottom: 15vh;
+  }
+  
+  .body-btn{
+    padding: 12.5px 30px;
+    margin: 1vh 0;
+    background-color: #26ca62;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  #body-btn-icon{
+    padding: 0 0.5vw;
+  }
+  
+  .body-btn:hover {
+    background-color: #20ab52;
+    #body-btn-icon{
+      padding-left: 1vw;
+      padding-right: 0;
+    }
+  }
+#sub-title{
+    color: white;
+    margin: 0 1vw;
+    font-size: 1.25em;
+    padding: 0.5vh 0;
+}
+
+#game-space {
+    margin: 0 1vh;
+    width: 80vw;
+}
+
+#info-game{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: row;
+}
+
+#image-area img{
+    width: 24vw;
+    border-radius: 10px;
+}
+
+#map { width: 40vw; }
+
+.btn-container { text-align: center; margin-top: 10px; }
+
+.custom-tooltip {
+    font-size: 12px;        /* Adjust the font size */
+    padding: 5px;          /* Control the padding inside the tooltip */
+    background-color: rgba(0, 0, 0, 0.7); /* Set a background color with transparency */
+    color: white;          /* Set the text color */
+    border-radius: 4px;    /* Make the corners round */
+}
+
+#score-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+#score-display p {
+    color: black;
+    font-size: 1em;
+    background: whitesmoke;
+    border: 2px solid black;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+
+footer{
+    height: 3vh;
+    color: black;
+    padding: 2.5vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
