@@ -11,14 +11,14 @@ app = Flask(__name__)
 app.secret_key = gen_key # Required for flash messages
 
 firebase_config = {
-  "apiKey": os.getenv('API_KEY'),
-  "authDomain": os.getenv('AUTH_DOMAIN'),
-  "databaseURL": os.getenv('DATABASE_URL'),
-  "projectId": os.getenv('PROJECT_ID'),
-  "storageBucket": os.getenv('STORAGE_BUCKET'),
-  "messagingSenderId": os.getenv('MESSAGING_SENDER_ID'),
-  "appId": os.getenv('APP_ID'),
-  "measurementId": os.getenv('MEASUREMENT_ID')
+  "apiKey": os.environ.get('API_KEY'),
+  "authDomain": os.environ.get('AUTH_DOMAIN'),
+  "databaseURL": os.environ.get('DATABASE_URL'),
+  "projectId": os.environ.get('PROJECT_ID'),
+  "storageBucket": os.environ.get('STORAGE_BUCKET'),
+  "messagingSenderId": os.environ.get('MESSAGING_SENDER_ID'),
+  "appId": os.environ.get('APP_ID'),
+  "measurementId": os.environ.get('MEASUREMENT_ID')
     }
 
 
