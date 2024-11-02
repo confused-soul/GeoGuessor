@@ -279,5 +279,9 @@ def logout():
     session.clear()
     return redirect('/')
 
+@app.route("/mobile")
+def mobile():
+    return render_template("mobile.html")  # A page for mobile users
+  
 if __name__ == '__main__':
     app.run(debug=True)
