@@ -278,3 +278,6 @@ def logout():
     # Clear session data to log out the user
     session.clear()
     return redirect('/')
+
+if __name__ == '__main__':
+    app.run(debug=True)
