@@ -2,7 +2,6 @@ import os
 import pyrebase
 import math
 import pandas as pd
-from config import firebase_config
 from flask import Flask, jsonify, render_template, request, redirect, flash, session
 from datetime import datetime
 
@@ -10,6 +9,18 @@ gen_key = os.urandom(24)  # Generates a 24-byte random key
 
 app = Flask(__name__)
 app.secret_key = gen_key # Required for flash messages
+
+firebase_config = {
+  "apiKey": os.getenv('API_KEY'),
+  "authDomain": os.getenv('AUTH_DOMAIN'),
+  "databaseURL": os.getenv('DATABASE_URL'),
+  "projectId": os.getenv('PROJECT_ID'),
+  "storageBucket": os.getenv('STORAGE_BUCKET'),
+  "messagingSenderId": os.getenv('MESSAGING_SENDER_ID'),
+  "appId": os.getenv('APP_ID'),
+  "measurementId": os.getenv('MEASUREMENT_ID')
+    }
+
 
 # Initialize Firebase
 firebase = pyrebase.initialize_app(firebase_config)
