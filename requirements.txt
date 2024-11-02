@@ -1,8 +1,4 @@
 Flask==3.0.3
 pyrebase4==4.8.0
 pandas==2.2.3
-<<<<<<< HEAD
 gunicorn
-=======
-gunicorn
->>>>>>> 2d25ecd8b9435908ef4a4b1679d30370c9d4de5b
